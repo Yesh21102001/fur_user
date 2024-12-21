@@ -20,7 +20,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/Descripition" element={<ProductDescripition />} />
-          <Route path="cart" element={<MyCart />} />
+          <Route path="/cart" element={<MyCart />} />
         </Routes>
         <Footer />
       </div>

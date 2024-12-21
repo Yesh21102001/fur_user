@@ -53,6 +53,10 @@ const Header = () => {
         navigate("/wishlist");
     }
 
+    const handleOpenCart = () => {
+        navigate("/cart");
+    }
+
     const handleHome = () => {
         navigate("/");
     }
@@ -86,7 +90,7 @@ const Header = () => {
             }}>
                 <FaUserCircle style={{ color: "white", width: "20px", height: "20px", marginLeft: "40px" }} onClick={handleOpenProfile} />
                 <FaHeart style={{ color: "white", width: "20px", height: "20px", marginLeft: "20px" }} onClick={handleOpenWishlist} />
-                <FaCartArrowDown style={{ color: "white", width: "20px", height: "20px", marginLeft: "20px" }} />
+                <FaCartArrowDown style={{ color: "white", width: "20px", height: "20px", marginLeft: "20px" }} onClick={handleOpenCart}/>
             </Box>
         </Box>
     );
