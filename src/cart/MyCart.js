@@ -1,10 +1,13 @@
 import React from "react";
-import { Box, Typography, Button, Grid, Divider } from "@mui/material";
+import { Box, Typography, Button, Grid, Divider, useMediaQuery } from "@mui/material";
 
 const MyCart = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   return (
-    <Box>
+    <Box sx={{ padding: "20px" }}>
       <Grid
+        container
         style={{
           backgroundColor: "#E4E0E1",
           height: "60px",
@@ -15,48 +18,48 @@ const MyCart = () => {
           alignItems: "center",
         }}
       >
-        <Grid
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex",
-          }}
-        >
+        <Grid item>
           <Typography
             variant="h5"
             style={{
               fontFamily: "Lexend, serif",
               fontWeight: "bold",
               marginLeft: "20px",
-              color: "#AB886D"
+              color: "#AB886D",
             }}
           >
             My Cart
           </Typography>
         </Grid>
       </Grid>
-      
 
       <Box
         sx={{
           display: "flex",
+          flexDirection: isMobile ? "column" : "row",
           justifyContent: "space-around",
           marginTop: "30px",
           marginBottom: "30px",
+          gap: isMobile ? "20px" : "0",
         }}
       >
         <Box
           sx={{
-            height: "300px",
-            width: "700px",
+            height: "auto",
+            width: isMobile ? "90%" : "700px",
             borderRadius: "10px",
             backgroundColor: "#E4E0E1",
+            padding: "20px",
+            alignItems: isMobile ? "flex-start" : "flex-start",
+            textAlign: isMobile ? "center" : "center",
           }}
         >
           <Box
             sx={{
               display: "flex",
+              flexDirection: isMobile ? "column" : "row",
               justifyContent: "space-around",
+              alignItems: isMobile ? "center" : "flex-start",
             }}
           >
             <Box>
@@ -65,171 +68,145 @@ const MyCart = () => {
                 style={{
                   height: "200px",
                   width: "200px",
-                  marginTop: "20px",
                   borderRadius: "5px",
-                  marginLeft: "-50px",
                 }}
+                alt="Product"
               />
             </Box>
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "flex-start",
-                marginTop: "30px",
-                marginLeft: "-50px",
+                alignItems: isMobile ? "center" : "flex-start",
+                textAlign: isMobile ? "center" : "left",
+                marginTop: isMobile ? "10px" : "30px",
               }}
             >
-              <Box>
-                <Typography
-                  variant="h5"
-                  sx={{ fontFamily: "Lexend, serif", fontWeight: "bold" }}
-                >
-                  Name
-                </Typography>
-              </Box>
-              <Box>
-                <Typography variant="h6" sx={{ fontFamily: "Lexend, serif" }}>
-                  Cost
-                </Typography>
-              </Box>
-              <Box>
-                <Typography
-                  sx={{ color: "green", fontFamily: "Lexend, serif" }}
-                >
-                  InStock
-                </Typography>
-              </Box>
-              <Box>
-                <Typography variant="h6" sx={{ fontFamily: "Lexend, serif" }}>
-                  Category Name
-                </Typography>
-              </Box>
-              <Box>
-                <Typography variant="h6" sx={{ fontFamily: "Lexend, serif" }}>
-                  Quantity
-                </Typography>
-              </Box>
+              <Typography
+                variant="h5"
+                sx={{ fontFamily: "Lexend, serif", fontWeight: "bold" }}
+              >
+                Name
+              </Typography>
+              <Typography variant="h6" sx={{ fontFamily: "Lexend, serif" }}>
+                Cost
+              </Typography>
+              <Typography sx={{ color: "green", fontFamily: "Lexend, serif" }}>
+                InStock
+              </Typography>
+              <Typography variant="h6" sx={{ fontFamily: "Lexend, serif" }}>
+                Category Name
+              </Typography>
+              <Typography variant="h6" sx={{ fontFamily: "Lexend, serif" }}>
+                Quantity
+              </Typography>
             </Box>
           </Box>
           <Divider sx={{ marginTop: "10px" }} />
-
-          <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-            <Box>
-              <Button
-                variant="contained"
-                sx={{
-                  fontFamily: "Lexend, serif",
-                  background: "linear-gradient(to right, #D6C0B3, #493628)",
-                  transition: "background-color 0.3s ease",
-                  width: "200px",
-                  marginTop: "10px",
-                  "&:hover": {
-                    background: "#493628",
-                  },
-                }}
-              >
-                Add To Wishlist
-              </Button>
-            </Box>
-            <Box>
-              <Button
-                variant="contained"
-                sx={{
-                  fontFamily: "Lexend, serif",
-                  background: "linear-gradient(to right, #D6C0B3, #493628)",
-                  width: "200px",
-                  transition: "background-color 0.3s ease",
-                  marginTop: "10px",
-                  "&:hover": {
-                    background: "#493628",
-                  },
-                }}
-              >
-                Remove
-              </Button>
-            </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: isMobile ? "center" : "space-around",
+              flexDirection: isMobile ? "column" : "row",
+              gap: "10px",
+            }}
+          >
+            <Button
+              variant="contained"
+              sx={{
+                fontFamily: "Lexend, serif",
+                background: "linear-gradient(to right, #D6C0B3, #493628)",
+                width: "200px",
+                marginTop: "10px",
+                "&:hover": {
+                  background: "#493628",
+                },
+              }}
+            >
+              Add To Wishlist
+            </Button>
+            <Button
+              variant="contained"
+              sx={{
+                fontFamily: "Lexend, serif",
+                background: "linear-gradient(to right, #D6C0B3, #493628)",
+                width: "200px",
+                marginTop: "10px",
+                "&:hover": {
+                  background: "#493628",
+                },
+              }}
+            >
+              Remove
+            </Button>
           </Box>
         </Box>
 
         <Box
           sx={{
-            height: "300px",
-            width: "300px",
+            height: "auto",
+            width: isMobile ? "90%" : "300px",
             borderRadius: "5px",
             backgroundColor: "#E4E0E1",
+            padding: "20px",
           }}
         >
-          <Box>
-            <Typography
-              variant="h6"
-              sx={{
-                marginTop: "20px",
-                fontFamily: "Lexend, serif",
-                color: "#493628",
-              }}
-            >
-              Order Summary
-            </Typography>
-          </Box>
+          <Typography
+            variant="h6"
+            sx={{
+              fontFamily: "Lexend, serif",
+              color: "#493628",
+              textAlign: isMobile ? "center" : "center",
+            }}
+          >
+            Order Summary
+          </Typography>
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
               gap: "20px",
-              alignItems: "flex-start",
+              alignItems: isMobile ? "flex-start" : "flex-start",
+              textAlign: isMobile ? "left" : "left",
             }}
           >
-            <Box>
-              <Typography
-                variant="h6"
-                sx={{
-                  marginTop: "20px",
-                  fontFamily: "Lexend, serif",
-                  marginLeft: "20px",
-                  color: "#AB886D",
-                }}
-              >
-                Total Products
-              </Typography>
-            </Box>
-            <Box>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontFamily: "Lexend, serif",
-                  marginLeft: "20px",
-                  color: "#AB886D",
-                }}
-              >
-                Total Cost
-              </Typography>
-            </Box>
-          </Box>
-
-          <Box>
-            <Button
-              variant="contained"
+            <Typography
+              variant="h6"
               sx={{
                 fontFamily: "Lexend, serif",
-                background: "#493628",
-                transition: "background-color 0.3s ease",
-                marginTop: "10px",
-                "&:hover": {
-                  background: "linear-gradient(to right, #D6C0B3, #493628)",
-                },
+                color: "#AB886D",
               }}
             >
-              Proceed To Pay
-            </Button>
+              Total Products
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{
+                fontFamily: "Lexend, serif",
+                color: "#AB886D",
+              }}
+            >
+              Total Cost
+            </Typography>
           </Box>
+          <Button
+            variant="contained"
+            sx={{
+              fontFamily: "Lexend, serif",
+              background: "#493628",
+              width: "100%",
+              marginTop: "10px",
+              "&:hover": {
+                background: "linear-gradient(to right, #D6C0B3, #493628)",
+              },
+            }}
+          >
+            Proceed To Pay
+          </Button>
           <Box
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
               marginTop: "10px",
-              marginLeft: "10px",
+              textAlign: isMobile ? "left" : "left",
             }}
           >
             <Typography
@@ -239,7 +216,7 @@ const MyCart = () => {
               Any Queries?
             </Typography>
             <Typography sx={{ fontFamily: "Lexend, serif", color: "#AB886D" }}>
-              Please Contact us to 1234567890
+              Please Contact us at 1234567890
             </Typography>
           </Box>
         </Box>

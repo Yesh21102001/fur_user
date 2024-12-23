@@ -25,9 +25,32 @@ const Wishlist = () => {
 
     return (
         <Box sx={{ padding: "20px" }}>
-            <Box>
-                <Typography variant="h5">Wishlist</Typography>
-            </Box>
+            <Grid
+                container
+                style={{
+                    backgroundColor: "#E4E0E1",
+                    height: "60px",
+                    display: "flex",
+                    width: "100%",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                }}
+            >
+                <Grid item>
+                    <Typography
+                        variant="h5"
+                        style={{
+                            fontFamily: "Lexend, serif",
+                            fontWeight: "bold",
+                            marginLeft: "20px",
+                            color: "#AB886D",
+                        }}
+                    >
+                        Wishlist
+                    </Typography>
+                </Grid>
+            </Grid>
             <Grid
                 container
                 spacing={4}
