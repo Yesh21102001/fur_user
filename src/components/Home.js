@@ -463,46 +463,136 @@ const Home = () => {
                     alignItems: "center",
                     paddingTop: "10px",
                     paddingBottom: "10px",
+                    flexDirection: { xs: "column", sm: "row" }, // Stack vertically on small screens
                 }}
             >
-                <Box sx={{ display: "flex", alignItems: "center", marginBottom: { xs: "10px", sm: "0" } }}>
-                    <Typography variant="h6" sx={{
-                        fontFamily: "Lexend, serif", transition: "background-color 0.3s ease",
-                        color: "#493628"
-                    }}>Assured Quality</Typography>
-                    <Divider orientation="vertical" sx={{ height: 30, marginX: 2, backgroundColor: "white" }} />
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginBottom: { xs: "10px", sm: "0" },
+                        flexDirection: { xs: "column", sm: "row" }, // Stack vertically on mobile
+                        justifyContent: "center", // Center items on mobile
+                    }}
+                >
+                    <Typography
+                        variant="h6"
+                        sx={{
+                            fontFamily: "Lexend, serif",
+                            transition: "background-color 0.3s ease",
+                            color: "#493628",
+                            textAlign: { xs: "center", sm: "left" }, // Center text on mobile
+                        }}
+                    >
+                        Assured Quality
+                    </Typography>
+                    <Divider
+                        orientation="vertical"
+                        sx={{ height: 30, marginX: 2, backgroundColor: "white", display: { xs: "none", sm: "block" } }} // Hide divider on mobile
+                    />
                 </Box>
 
-                <Box sx={{ display: "flex", alignItems: "center", marginBottom: { xs: "10px", sm: "0" } }}>
-                    <Typography variant="h6" sx={{
-                        fontFamily: "Lexend, serif", transition: "background-color 0.3s ease",
-                        color: "#493628"
-                    }}>1 Year Warranty</Typography>
-                    <Divider orientation="vertical" sx={{ height: 30, marginX: 2, backgroundColor: "white" }} />
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginBottom: { xs: "10px", sm: "0" },
+                        flexDirection: { xs: "column", sm: "row" },
+                        justifyContent: "center",
+                    }}
+                >
+                    <Typography
+                        variant="h6"
+                        sx={{
+                            fontFamily: "Lexend, serif",
+                            transition: "background-color 0.3s ease",
+                            color: "#493628",
+                            textAlign: { xs: "center", sm: "left" },
+                        }}
+                    >
+                        1 Year Warranty
+                    </Typography>
+                    <Divider
+                        orientation="vertical"
+                        sx={{ height: 30, marginX: 2, backgroundColor: "white", display: { xs: "none", sm: "block" } }}
+                    />
                 </Box>
 
-                <Box sx={{ display: "flex", alignItems: "center", marginBottom: { xs: "10px", sm: "0" } }}>
-                    <Typography variant="h6" sx={{
-                        fontFamily: "Lexend, serif", transition: "background-color 0.3s ease",
-                        color: "#493628"
-                    }}>Delivery Available</Typography>
-                    <Divider orientation="vertical" sx={{ height: 30, marginX: 2, backgroundColor: "white" }} />
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginBottom: { xs: "10px", sm: "0" },
+                        flexDirection: { xs: "column", sm: "row" },
+                        justifyContent: "center",
+                    }}
+                >
+                    <Typography
+                        variant="h6"
+                        sx={{
+                            fontFamily: "Lexend, serif",
+                            transition: "background-color 0.3s ease",
+                            color: "#493628",
+                            textAlign: { xs: "center", sm: "left" },
+                        }}
+                    >
+                        Delivery Available
+                    </Typography>
+                    <Divider
+                        orientation="vertical"
+                        sx={{ height: 30, marginX: 2, backgroundColor: "white", display: { xs: "none", sm: "block" } }}
+                    />
                 </Box>
 
-                <Box sx={{ display: "flex", alignItems: "center", marginBottom: { xs: "10px", sm: "0" } }}>
-                    <Typography variant="h6" sx={{
-                        fontFamily: "Lexend, serif", transition: "background-color 0.3s ease",
-                        color: "#493628"
-                    }}>Assembly Within 48hours</Typography>
-                    <Divider orientation="vertical" sx={{ height: 40, marginX: 2, backgroundColor: "white" }} />
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginBottom: { xs: "10px", sm: "0" },
+                        flexDirection: { xs: "column", sm: "row" },
+                        justifyContent: "center",
+                    }}
+                >
+                    <Typography
+                        variant="h6"
+                        sx={{
+                            fontFamily: "Lexend, serif",
+                            transition: "background-color 0.3s ease",
+                            color: "#493628",
+                            textAlign: { xs: "center", sm: "left" },
+                        }}
+                    >
+                        Assembly Within 48hours
+                    </Typography>
+                    <Divider
+                        orientation="vertical"
+                        sx={{ height: 40, marginX: 2, backgroundColor: "white", display: { xs: "none", sm: "block" } }}
+                    />
                 </Box>
 
-                <Box sx={{ display: "flex", alignItems: "center", marginBottom: { xs: "10px", sm: "0" } }}>
-                    <Typography variant="h6" sx={{
-                        fontFamily: "Lexend, serif", transition: "background-color 0.3s ease", color: "#493628",
-                    }}>Your Dream We Design</Typography>
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginBottom: { xs: "10px", sm: "0" },
+                        flexDirection: { xs: "column", sm: "row" },
+                        justifyContent: "center",
+                    }}
+                >
+                    <Typography
+                        variant="h6"
+                        sx={{
+                            fontFamily: "Lexend, serif",
+                            transition: "background-color 0.3s ease",
+                            color: "#493628",
+                            textAlign: { xs: "center", sm: "left" },
+                        }}
+                    >
+                        Your Dream We Design
+                    </Typography>
                 </Box>
             </Box>
+
         </Box>
     );
 };

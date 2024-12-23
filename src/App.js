@@ -9,12 +9,13 @@ import Wishlist from './wishlist/Wishlist';
 import ProductDescripition from './productDescripition/ProductDescripition';
 import MyCart from './cart/MyCart';
 import EditProfile from './profile/EditProfile';
+import SignUp from './auth/SignUp';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Header/>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
@@ -23,6 +24,7 @@ function App() {
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/Descripition" element={<ProductDescripition />} />
           <Route path="/cart" element={<MyCart />} />
+          <Route path="signup" element={<SignUp />} />
         </Routes>
         <Footer />
       </div>

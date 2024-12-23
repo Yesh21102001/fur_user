@@ -209,7 +209,7 @@ const Profile = () => {
             />
 
             <Box sx={{ padding: "10px" }}>
-              <Box sx={{ display: "flex", justifyContent: "space-around", backgroundColor: "#D6C0B3", padding: "10px", marginTop: "-10px" }}>
+              <Box sx={{ display: "flex", justifyContent: "space-around", padding: "10px", marginTop: "-10px" }}>
                 <Box>
                   <img
                     src="https://img.freepik.com/free-photo/scandinavian-vintage-wood-cabinet-with-chair-by-dark-blue-wall_53876-98164.jpg?t=st=1734773331~exp=1734776931~hmac=364458b1c6fb12bd4656d78b4b5775578706c67716898f67e6e4c34e50af5c57&w=740"
