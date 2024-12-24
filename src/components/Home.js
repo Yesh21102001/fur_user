@@ -125,8 +125,6 @@ const Home = () => {
                     >
                         Shop Now
                     </Button>
-
-
                 </Box>
             </Box>
 
@@ -155,6 +153,7 @@ const Home = () => {
                                 transition: "background-color 0.3s ease",
                                 '&:hover': {
                                     backgroundColor: "#AB886D",
+                                    width: "80%",
                                 }
                             }}
                         >
