@@ -10,6 +10,9 @@ import ProductDescripition from './productDescripition/ProductDescripition';
 import MyCart from './cart/MyCart';
 import EditProfile from './profile/EditProfile';
 import SignUp from './auth/SignUp';
+import SignIn from './auth/SignIn';
+import Forgot from './auth/Forgot';
+import Verification from './auth/Verification';
 
 function App() {
   return (
@@ -24,7 +27,10 @@ function App() {
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/Descripition" element={<ProductDescripition />} />
           <Route path="/cart" element={<MyCart />} />
-          <Route path="signup" element={<SignUp />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/forgot" element={<Forgot />} />
+          <Route path='/verification' element={<Verification />} />
         </Routes>
         <Footer />
       </div>
